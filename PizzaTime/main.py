@@ -8,22 +8,19 @@ print(f"Wait while we do some quik maffs for {total_lexis} lexis")
 
 minimum_lexis = 15
 extra_lexis = total_lexis - minimum_lexis
-bonus_garlic = math.ceil(extra_lexis/3)
+bonus_garlic = math.ceil(extra_lexis/5)
 bonus_wildcards = math.floor(extra_lexis/8)
 bonus_pizza = math.ceil(extra_lexis*0.75) - bonus_wildcards
 next_pizza_index = 0
 
 staples = [
-    "cheese", 
-    "meat_lovers", 
-    "vegan_spicy_veg_supreme", 
-    "margherita", 
-    "hawaiian", 
-    "vegan_beef", 
-    "regular_godfather", 
-    "peri_peri", 
-    "pepperoni", 
-    "wild_cards"
+    "cheese",
+    "meat_lovers",
+    "margherita",
+    "hawaiian",
+    "regular_godfather",
+    "peri_peri",
+    "pepperoni"
 ]
 
 base_order = {
@@ -32,24 +29,26 @@ base_order = {
         "hawaiian": 1,
         "cheese": 2,
         "margherita": 1,
-        "vegan_spicy_veg_supreme": 1,
-        "vegan_beef": 1,
+        "double_bacon_cheeseburger": 1,
+        "vegan_beef_no_olive": 1,
         "regular_godfather": 1,
         "peri_peri": 1,
         "pepperoni": 1,
-        "wild_cards": 2,
+        "wild_cards": 1,
+        "vegan_wild_cards": 1,
     },
     "sides": {
         "garlic_breads": 5
     }
 }
 
+staple_len = len(staples) - 1
 base_order["pizzas"]["wild_cards"] += bonus_wildcards
 base_order["sides"]["garlic_breads"] += bonus_garlic
 
 while bonus_pizza > 0:
     base_order["pizzas"][staples[next_pizza_index]] += 1
-    if next_pizza_index == 8:
+    if next_pizza_index == staple_len:
         next_pizza_index = 0
     else:
         next_pizza_index += 1
