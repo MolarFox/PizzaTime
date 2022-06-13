@@ -18,6 +18,7 @@ staples = [
     "meat_lovers",
     "margherita",
     "hawaiian",
+    "vegorama",
     "regular_godfather",
     "peri_peri",
     "pepperoni"
@@ -27,7 +28,8 @@ base_order = {
     "pizzas": {
         "meat_lovers": 1,
         "hawaiian": 1,
-        "cheese": 2,
+        "cheese": 1,
+        "vegorama": 1,
         "margherita": 1,
         "double_bacon_cheeseburger": 1,
         "vegan_beef_no_olive": 1,
