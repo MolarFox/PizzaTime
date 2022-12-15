@@ -32,7 +32,7 @@ base_order = {
         "vegorama": 1,
         "margherita": 1,
         "double_bacon_cheeseburger": 1,
-        "vegan_beef_no_olive": 1,
+        "vegan_margherita": 1,
         "regular_godfather": 1,
         "peri_peri": 1,
         "pepperoni": 1,
