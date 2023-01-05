@@ -40,7 +40,7 @@ base_order = {
         "vegan_wild_cards": 1,
     },
     "sides": {
-        "garlic_breads": 5
+        "garlic_breads": 3
     }
 }
 
